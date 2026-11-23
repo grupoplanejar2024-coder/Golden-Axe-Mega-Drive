@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KUBO TOUCH — Retro Player</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html, body {
+      width: 100%;
+      height: 100%;
+      background-color: #0d0f14;
+      color: #ffffff;
+      font-family: system-ui, -apple-system, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    #game-container {
+      width: 100vw;
+      height: 100vh;
+      max-width: 100%;
+      max-height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div id="game-container">
+    <div id="game"></div>
+  </div>
+
+  <script>
+    // Altera estes valores conforme o jogo e a consola
+    EJS_player = "#game";
+    EJS_core = "snes"; // Exemplos: "snes", "n64", "segaMD", "gb", "psx"
+    EJS_gameName = "Nome do Jogo";
+    EJS_color = "#ff5a1f";
+    EJS_startOnLoaded = true;
+    EJS_pathtodata = "https://cdn.emulatorjs.org/stable/data/";
+
+    // Coloca aqui o caminho ou URL direto para o ficheiro da ROM (.sfc, .smc, .z64, .md, .bin, etc.)
+    EJS_gameUrl = "./roms/seu-jogo.rom";
+  </script>
+  <script src="https://cdn.emulatorjs.org/stable/data/loader.js"></script>
+</body>
+</html>
